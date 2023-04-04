@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="calculation.js"></script>
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<td colspan="4">
+					<input type="text" id="input" placeholder="0" readonly="readonly">
+					<input type="text" id="answer" readonly="readonly">
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="CE" onclick="clearScreen()" style="color: white; background: red;"></td>
+				<td><input type="button" value="/" onclick="getOperand('/')"></td>
+				<td><input type="button" value="x" onclick="getOperand('x')"></td>
+				<td><input type="button" value="&#8592;" onclick="backspace()" style="color: red;"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="1" onclick="getNumber(1)"></td>
+				<td><input type="button" value="2" onclick="getNumber(2)"></td>
+				<td><input type="button" value="3" onclick="getNumber(3)"></td>
+				<td><input type="button" value="+" onclick="getOperand('+') "></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="4" onclick="getNumber(4)"></td>
+				<td><input type="button" value="5" onclick="getNumber(5)"></td>
+				<td><input type="button" value="6" onclick="getNumber(6)"></td>
+				<td><input type="button" value="-" onclick="getOperand('-')"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="7" onclick="getNumber(7)"></td>
+				<td><input type="button" value="8" onclick="getNumber(8)"></td>
+				<td><input type="button" value="9" onclick="getNumber(9)"></td>
+				<td><input type="button" value="( )" onclick="brackets()"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="+/-" onclick="getOperand('+/-')"></td>
+				<td><input type="button" value="0" onclick="getNumber(0)"></td>
+				<td colspan="2"><input type="button" value="=" onclick="compute()" style="color: white; background: green; width: 126px;"></td>
+			</tr>
+		</table>
+	</body>
+</html>
